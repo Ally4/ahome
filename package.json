@@ -4,7 +4,9 @@
   "description": "Rent houses",
   "main": "app.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./server/app.js"
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./server/app.js",
+    "test": "nyc --reporter-html --report=text mocha --recursive --require @babel/register --timeout 10000 --exit ./server/tests/*.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -28,10 +30,16 @@
     "@babel/preset-env": "^7.11.5",
     "@babel/register": "^7.11.5",
     "@babel/runtime": "^7.11.2",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "chai-things": "^0.2.0",
+    "coveralls": "^3.1.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mocha": "^8.1.3",
     "nodemon": "^2.0.4",
+    "nyc": "^15.1.0",
     "pg": "^8.3.3",
     "pg-hstore": "^2.3.3",
     "sequelize": "^6.3.5"
