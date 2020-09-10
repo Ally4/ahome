@@ -12,5 +12,5 @@ describe('Welcome', () => {
             res.body.status.should.be.equal(200),
             done()
         });
-    })
-})
+    });
+});
