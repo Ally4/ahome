@@ -1,12 +1,12 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-import database from './config/database';
+// import database from './config/database';
 
 
 dotenv.config();
 
-database.authenticate().then(() => console.log('The database is well connected ...')).catch(err => console.log(`This is the error ${err}`))
+// database.authenticate().then(() => console.log('The database is well connected ...')).catch(err => console.log(`This is the error ${err}`))
 
 const app = express();
 
