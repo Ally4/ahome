@@ -1,7 +1,7 @@
 import sequelize from 'sequelize';
 import database from '../config/database'
 
-const Houses = database.define('users', {
+const Houses = database.define('houses', {
   image: {
     type: sequelize.STRING
   },
