@@ -1,12 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
-// import database from './config/database';
+import router from '../server/router/houses';
 
 
 dotenv.config();
 
-// database.authenticate().then(() => console.log('The database is well connected ...')).catch(err => console.log(`This is the error ${err}`))
 
 const app = express();
 
@@ -20,6 +19,9 @@ app.get('/', (req, res) => {
     message: "Welcome home",
   });
 });
+
+
+app.use('/', router);
 
 const port = process.env.PORT || 3000;
 
