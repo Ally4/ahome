@@ -31,6 +31,9 @@
 
 
 module.exports = (sequelize, DataTypes) => {
+
+  class User extends Model {
+
   const User = sequelize.define('users', {
     firstname: DataTypes.STRING,
     lastname: DataTypes.STRING,
@@ -51,6 +54,7 @@ module.exports = (sequelize, DataTypes) => {
     });
   };
   return User;
+}
 };
 
 // database/models/user.js
