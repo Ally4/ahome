@@ -1,4 +1,3 @@
-import sequelize from 'sequelize';
 import houseRec from '../src/database/models/houses';
 
 const createHouse = async (req, res) => {
